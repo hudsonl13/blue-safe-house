@@ -7,3 +7,107 @@
     border: 0;
     margin: 0;
 }
+
+.container
+{
+    margin: 0 20px;
+}
+
+header
+{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+
+    nav
+    {
+
+        height: 50px;
+        display: flex;
+        align-items: center;
+        background-color: #000;
+        line-height: 50px;
+
+        div
+        {
+            width: 20px;
+            height: 15px;
+            margin-left: 20px;
+            background-image: url("/images/hamburger.svg");
+        }
+
+        ul
+        {
+            display: none;
+        }
+    }
+}
+
+#hero
+{
+    height: 600px;
+    background: url("/images/mountains_lowpoly.png") no-repeat bottom, url("/images/binarycode_black.svg")  no-repeat center , linear-gradient(#000 , #001423);
+    color: #CCC;
+
+    div
+    {
+        padding-top: 150px;
+        text-align: center;
+
+        h1
+        {
+            font-family: "Josefin Sans";
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 9.6px;
+            text-transform: uppercase;
+
+            span
+            {
+                font-weight: 100;
+            }
+        }
+
+        p
+        {
+            font-family: "Roboto";
+            font-size: 18px;
+            font-weight: 100;
+            text-transform: lowercase;
+        }
+    }
+}
+
+#about
+{
+    background-color: #000;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 300;
+    color: #CCC;
+
+    #wrapper
+    {
+        position: relative;
+        height: 535px;
+
+        #picture-background
+        {
+            position: absolute;
+            top: 135px;
+            left: 130px;
+            width: 180px;
+            height: 350px;
+            background-color: #CCC;
+        }
+
+        #picture
+        {
+            position: absolute;
+            width: 260px;
+            height: 430px;
+            background: url("/images/hudsonlessa_lowpoly.png") no-repeat;
+            background-size: contain;
+        }
+    }
+}
