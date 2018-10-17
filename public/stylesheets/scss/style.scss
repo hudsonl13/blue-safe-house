@@ -8,8 +8,15 @@
     margin: 0;
 }
 
+body
+{
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
 .container
 {
+    padding: 100px 0;
     margin: 0 20px;
 }
 
@@ -24,7 +31,6 @@ header
 
         height: 50px;
         display: flex;
-        align-items: center;
         background-color: #000;
         line-height: 50px;
 
@@ -32,7 +38,7 @@ header
         {
             width: 20px;
             height: 15px;
-            margin-left: 20px;
+            margin: auto 20px;
             background-image: url("/images/hamburger.svg");
         }
 
@@ -46,7 +52,8 @@ header
 #hero
 {
     height: 600px;
-    background: url("/images/mountains_lowpoly.png") no-repeat bottom, url("/images/binarycode_black.svg")  no-repeat center , linear-gradient(#000 , #001423);
+    background: url("/images/mountains_lowpoly.png") no-repeat center bottom , url("/images/binarycode_black.svg") center top , linear-gradient(#000 , #001423);
+    background-size: cover , 1000px , cover;
     color: #CCC;
 
     div
@@ -70,8 +77,6 @@ header
 
         p
         {
-            font-family: "Roboto";
-            font-size: 18px;
             font-weight: 100;
             text-transform: lowercase;
         }
@@ -81,21 +86,21 @@ header
 #about
 {
     background-color: #000;
-    font-family: "Roboto";
-    font-size: 16px;
     font-weight: 300;
     color: #CCC;
 
     #wrapper
     {
         position: relative;
+        width: 290px;
         height: 535px;
+        margin: 0 auto;
 
         #picture-background
         {
             position: absolute;
             top: 135px;
-            left: 130px;
+            left: 110px;
             width: 180px;
             height: 350px;
             background-color: #CCC;
@@ -109,5 +114,310 @@ header
             background: url("/images/hudsonlessa_lowpoly.png") no-repeat;
             background-size: contain;
         }
+    }
+
+    p
+    {
+        margin-bottom: 20px;
+        line-height: 24px;
+    }
+
+    p:last-of-type
+    {
+        margin-bottom: 0px;
+    }
+
+    .text-dark
+    {
+        color: #777;
+    }
+}
+
+#services-portfolio-container
+{
+    background: url("/images/binarycode_white.svg") center top , linear-gradient(#CCC , #FFF);
+    background-size: 1000px , cover;
+}
+
+#services
+{
+    color: #001423;
+
+    .section-title-container
+    {
+        width: 290px;
+
+        .section-title-background
+        {
+            left: 40px;
+            width: 250px;
+            background-color: #FFF;
+        }
+    }
+
+    ul
+    {
+        list-style-type: none;
+
+        .service
+        {
+            margin-bottom: 100px;
+            text-align: center;
+
+            &:last-of-type
+            {
+                margin-bottom: 0;
+            }
+
+            &:nth-of-type(1)
+            {
+                .icon-service
+                {
+                    background: url("/images/icon_webpage.svg") no-repeat;
+                }
+            }
+
+            &:nth-of-type(2)
+            {
+                .icon-service
+                {
+                    background: url("/images/icon_smartphone.svg") no-repeat;
+                }
+            }
+
+            &:nth-of-type(3)
+            {
+                .icon-service
+                {
+                    background: url("/images/icon_monitor.svg") no-repeat;
+                }
+            }
+
+            h1
+            {
+                margin-bottom: 50px;
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            p
+            {
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+#portfolio
+{
+    color: #001423;
+
+    .container
+    {
+        .section-title-container
+        {
+            width: 280px;
+
+            .section-title-background
+            {
+                left: -40px;
+                width: 240px;
+                background-color: #CCC;
+            }
+        }
+
+        #projects
+        {
+            display: grid;
+            grid-auto-rows: 200px;
+            grid-template-columns: repeat(auto-fit , minmax(100% , 1fr));
+            list-style-type: none;
+
+            .project
+            {
+                position: relative;
+                border: 1px solid #001423;
+                background-color: #CCC;
+                text-align: center;
+
+                &:nth-of-type(1)::after
+                {
+                    background: url("/images/project_e-stop.jpg") no-repeat;
+                    background-size: cover;
+                }
+
+                &:nth-of-type(2)::after
+                {
+                    background: url("/images/project_sonar.jpg") no-repeat;
+                    background-size: cover;
+                }
+
+                &:nth-of-type(3)::after
+                {
+                    background: url("/images/project_acampebem.jpg") no-repeat;
+                    background-size: cover;
+                }
+
+                &::after
+                {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    opacity: 1;
+                }
+
+                &:hover::after
+                {
+                    opacity: .1;
+                }
+
+                .wrapper
+                {
+                    padding: 20px;
+
+                    h1
+                    {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                    }
+
+                    p:last-of-type
+                    {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-title-container
+{
+    position: relative;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.section-title-background
+{
+    position: absolute;
+    top: 15px;
+    height: 25px;
+}
+
+.section-title
+{
+    position: absolute;
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.icon-service
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 20px;
+}
+
+#contact
+{
+    background: url("/images/binarycode_black.svg") center top , linear-gradient(#000 , #001423);
+    background-size: 1000px , cover;
+    color: #CCC;
+
+    .container
+    {
+        .section-title-container
+        {
+            width: 140px;
+
+            .section-title-background
+            {
+                left: 40px;
+                width: 100px;
+                background-color: #001423;
+            }
+
+            .section-title
+            {
+                color: #CCC;
+            }
+        }
+
+        form
+        {
+            display: grid;
+            grid-gap: 10px;
+            grid-auto-columns: 245px;
+            justify-content: center;
+
+            input
+            {
+                height: 30px;
+                padding: 10px;
+                border-radius: 0;
+                font-family: "Roboto";
+                font-size: 16px;
+            }
+
+            textarea
+            {
+                grid-row-end: span 15;
+                padding: 10px;
+                border-radius: 0;
+                overflow-y: scroll;
+                resize: none;
+                font-family: "Roboto";
+                font-size: 16px;
+            }
+
+            button
+            {
+                height: 50px;
+                background-color: #FFF;
+                font-family: "Roboto";
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+footer
+{
+    background-color: #000;
+    text-align: center;
+
+    div
+    {
+        display: flex;
+        justify-content: center;
+
+        a
+        {
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin: 50px 10px;
+        }
+
+        a:nth-of-type(1)
+        {
+            background: url("/images/icon_instagram.svg") no-repeat;
+        }
+
+        a:nth-of-type(2)
+        {
+            background: url("/images/icon_github.svg") no-repeat;
+        }
+    }
+
+    a
+    {
+        display: block;
+        padding-bottom: 50px;
     }
 }
