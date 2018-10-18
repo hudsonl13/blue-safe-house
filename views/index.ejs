@@ -17,11 +17,11 @@
         <nav>
             <div></div>
             <ul>
-                <li><a href = #>Início</a>
-                <li><a href = #>Sobre</a>
-                <li><a href = #>Serviços</a>
-                <li><a href = #>Portfolio</a>
-                <li><a href = #>Contato</a>
+                <li><a href = "#hero">Início</a>
+                <li><a href = "#about">Sobre</a>
+                <li><a href = "#services">Serviços</a>
+                <li><a href = "#portfolio">Portfolio</a>
+                <li><a href = "#contact">Contato</a>
             </ul>
         </nav>
     </header>
@@ -36,29 +36,31 @@
 
         <section id = "about">
             <div class = "container">
-                <div id = "wrapper">
+                <div id = "picture-container">
                     <div id = "picture-background"></div>
                     <div id = "picture"></div>
                 </div>
 
-                <p>
-                    Com mais de dois anos de experiência, atuo nas áreas de design de
-                    experiência do usuário, design de interface, programação front-end e
-                    programação back-end. Combino o melhor do design com o melhor da
-                    programação para desenvolver trabalhos exclusivos e personalizados.
-                </p>
+                <div id = "about-wrapper">
+                    <p>
+                        Com mais de dois anos de experiência, atuo nas áreas de design de
+                        experiência do usuário, design de interface, programação front-end e
+                        programação back-end. Combino o melhor do design com o melhor da
+                        programação para desenvolver trabalhos exclusivos e personalizados.
+                    </p>
 
-                <p class = "text-dark">
-                    Ferramentas que eu uso: Papel e caneta, Photoshop, Illustrator
-                </p>
+                    <p class = "text-dark">
+                        Ferramentas que eu uso: Papel e caneta, Photoshop, Illustrator
+                    </p>
 
-                <p class = "text-dark">
-                    Linguagens que eu falo: HTML, CSS, JavaScript
-                </p>
+                    <p class = "text-dark">
+                        Linguagens que eu falo: HTML, CSS, JavaScript
+                    </p>
 
-                <p class = "text-dark">
-                    Plataformas e frameworks preferidos: Node.JS, React, React Native
-                </p>
+                    <p class = "text-dark">
+                        Plataformas e frameworks preferidos: Node.JS, React, React Native
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -115,7 +117,7 @@
                     </div>
 
                     <ul id = "projects">
-                        <li class = "project">
+                        <li class = "project" onclick = "void(0)">
                             <div class = "wrapper">
                                 <h1>E-STOP</h1>
                                 <p>Sistema de Gerenciamento de Estacionamento</p>
@@ -123,7 +125,7 @@
                             </div>
                         </li>
 
-                        <li class = "project">
+                        <li class = "project" onclick = "void(0)">
                             <div class = "wrapper">
                                 <h1>SONAR</h1>
                                 <p>Buscador de Arquivos Por Código QR e Realidade Aumentada</p>
@@ -131,7 +133,7 @@
                             </div>
                         </li>
 
-                        <li class = "project">
+                        <li class = "project" onclick = "void(0)">
                             <div class = "wrapper">
                                 <h1>AcampeBem</h1>
                                 <p>Website Comparador de Acampamentos</p>
@@ -139,19 +141,19 @@
                             </div>
                         </li>
 
-                        <li class = "project">
+                        <li class = "project" onclick = "void(0)">
                             <h1>E-STOP</h1>
                             <p>Sistema de Gerenciamento de Estacionamento</p>
                             <p>Java, MySQL</p>
                         </li>
 
-                        <li class = "project">
+                        <li class = "project" onclick = "void(0)">
                             <h1>E-STOP</h1>
                             <p>Sistema de Gerenciamento de Estacionamento</p>
                             <p>Java, MySQL</p>
                         </li>
 
-                        <li class = "project">
+                        <li class = "project" onclick = "void(0)">
                             <h1>E-STOP</h1>
                             <p>Sistema de Gerenciamento de Estacionamento</p>
                             <p>Java, MySQL</p>
@@ -169,10 +171,10 @@
                 </div>
 
                 <form>
-                    <input type = "text" placeholder = "Nome">
-                    <input type = "text" placeholder = "Endereço de email">
-                    <input type = "text" placeholder = "Assunto">
-                    <textarea placeholder = "Mensagem"></textarea>
+                    <input type = "text" name = "name" placeholder = "Nome">
+                    <input type = "text" name = "emailAddress" placeholder = "Endereço de email">
+                    <input type = "text" name = "subject" placeholder = "Assunto">
+                    <textarea name = "message" placeholder = "Mensagem"></textarea>
                     <button>ENVIAR</button>
                 </form>
             </div>
@@ -181,8 +183,8 @@
 
     <footer>
         <div>
-            <a class = "icon-social" href = "http://instagram.com/hudsonl13"></a>
-            <a class = "icon-social" href = "http://github.com/hudsonl13"></a>
+            <a class = "icon-social" href = "http://instagram.com/hudsonl13">Instagram</a>
+            <a class = "icon-social" href = "http://github.com/hudsonl13">GitHub</a>
         </div>
 
         <a href = "#">Política de Privacidade (em inglês)</a>

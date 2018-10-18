@@ -11,21 +11,42 @@ body {
   font-size: 16px;
 }
 
+a {
+  color: #CCC;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #CCC;
+}
+
 .container {
-  padding: 100px 0;
-  margin: 0 20px;
+  padding: 100px 20px;
+  margin: 0 auto;
 }
 
 header {
   position: fixed;
   z-index: 1;
   width: 100%;
+  background-color: #000;
 }
 header nav {
-  height: 50px;
   display: flex;
-  background-color: #000;
+  max-width: 1180px;
+  height: 50px;
   line-height: 50px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  header nav {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header nav {
+    justify-content: right;
+  }
 }
 header nav div {
   width: 20px;
@@ -33,26 +54,71 @@ header nav div {
   margin: auto 20px;
   background-image: url("/images/hamburger.svg");
 }
+@media only screen and (min-width: 768px) {
+  header nav div {
+    width: 32px;
+    height: 32px;
+    background-image: url("/images/logo.png");
+  }
+}
 header nav ul {
   display: none;
+  list-style-type: none;
+}
+@media only screen and (min-width: 768px) {
+  header nav ul {
+    display: flex;
+  }
+}
+header nav ul li {
+  margin: 0 20px;
+  font-family: "Montserrat";
+  text-transform: uppercase;
 }
 
 #hero {
-  height: 600px;
+  height: 700px;
   background: url("/images/mountains_lowpoly.png") no-repeat center bottom, url("/images/binarycode_black.svg") center top, linear-gradient(#000, #001423);
-  background-size: cover, 1000px, cover;
-  color: #CCC;
+  background-size: auto, 1000px, cover;
+}
+@media only screen and (min-width: 768px) {
+  #hero {
+    height: 1000px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #hero {
+    height: 900px;
+  }
 }
 #hero div {
-  padding-top: 150px;
+  padding-top: 180px;
   text-align: center;
+  color: #CCC;
+}
+@media only screen and (min-width: 768px) {
+  #hero div {
+    padding-top: 300px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #hero div {
+    padding-top: 250px;
+  }
 }
 #hero div h1 {
+  padding-left: 10px;
   font-family: "Josefin Sans";
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 9.6px;
   text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  #hero div h1 {
+    font-size: 48px;
+    letter-spacing: 19.2px;
+  }
 }
 #hero div h1 span {
   font-weight: 100;
@@ -61,42 +127,63 @@ header nav ul {
   font-weight: 100;
   text-transform: lowercase;
 }
+@media only screen and (min-width: 768px) {
+  #hero div p {
+    font-size: 28px;
+  }
+}
 
 #about {
   background-color: #000;
   font-weight: 300;
   color: #CCC;
 }
-#about #wrapper {
-  position: relative;
-  width: 290px;
-  height: 535px;
+#about .container {
+  max-width: 500px;
   margin: 0 auto;
 }
-#about #wrapper #picture-background {
+@media only screen and (min-width: 1200px) {
+  #about .container {
+    display: flex;
+    max-width: 1180px;
+  }
+}
+#about .container #picture-container {
+  position: relative;
+  width: 280px;
+  height: 485px;
+  margin: 0 auto 50px;
+}
+#about .container #picture-container #picture-background {
   position: absolute;
   top: 135px;
   left: 110px;
-  width: 180px;
+  width: 170px;
   height: 350px;
   background-color: #CCC;
 }
-#about #wrapper #picture {
+#about .container #picture-container #picture {
   position: absolute;
   width: 260px;
   height: 430px;
   background: url("/images/hudsonlessa_lowpoly.png") no-repeat;
   background-size: contain;
 }
-#about p {
+@media only screen and (min-width: 1200px) {
+  #about .container #about-wrapper {
+    margin-top: 132px;
+    margin-left: 170px;
+  }
+}
+#about .container #about-wrapper p {
   margin-bottom: 20px;
   line-height: 24px;
 }
-#about p:last-of-type {
-  margin-bottom: 0px;
+#about .container #about-wrapper p:first-of-type {
+  margin-bottom: 50px;
 }
-#about .text-dark {
-  color: #777;
+#about .container #about-wrapper p:last-of-type {
+  margin-bottom: 0;
 }
 
 #services-portfolio-container {
@@ -107,58 +194,108 @@ header nav ul {
 #services {
   color: #001423;
 }
-#services .section-title-container {
-  width: 290px;
+#services .container {
+  max-width: 500px;
+  margin: 0 auto;
 }
-#services .section-title-container .section-title-background {
-  left: 40px;
-  width: 250px;
+@media only screen and (min-width: 1200px) {
+  #services .container {
+    max-width: 1180px;
+  }
+}
+#services .container .section-title-container {
+  width: 275px;
+}
+@media only screen and (min-width: 1200px) {
+  #services .container .section-title-container {
+    margin: 0 0;
+  }
+}
+#services .container .section-title-container .section-title-background {
+  left: 10px;
+  width: 265px;
   background-color: #FFF;
 }
-#services ul {
+#services .container ul {
   list-style-type: none;
 }
-#services ul .service {
+@media only screen and (min-width: 1200px) {
+  #services .container ul {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
+#services .container ul .service {
   margin-bottom: 100px;
   text-align: center;
 }
-#services ul .service:last-of-type {
+#services .container ul .service:last-of-type {
   margin-bottom: 0;
 }
-#services ul .service:nth-of-type(1) .icon-service {
+#services .container ul .service:nth-of-type(1) .icon-service {
   background: url("/images/icon_webpage.svg") no-repeat;
 }
-#services ul .service:nth-of-type(2) .icon-service {
+#services .container ul .service:nth-of-type(2) .icon-service {
   background: url("/images/icon_smartphone.svg") no-repeat;
 }
-#services ul .service:nth-of-type(3) .icon-service {
+#services .container ul .service:nth-of-type(3) .icon-service {
   background: url("/images/icon_monitor.svg") no-repeat;
 }
-#services ul .service h1 {
-  margin-bottom: 50px;
+#services .container ul .service h1 {
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: 400;
 }
-#services ul .service p {
-  line-height: 30px;
+#services .container ul .service p {
+  line-height: 24px;
+}
+@media only screen and (min-width: 1200px) {
+  #services .container ul .service p {
+    padding: 0 20px;
+  }
 }
 
 #portfolio {
   color: #001423;
 }
+@media only screen and (min-width: 1200px) {
+  #portfolio .container {
+    max-width: 1180px;
+  }
+}
 #portfolio .container .section-title-container {
-  width: 280px;
+  width: 270px;
+}
+@media only screen and (min-width: 1200px) {
+  #portfolio .container .section-title-container {
+    left: 870px;
+    margin: 0 0;
+  }
 }
 #portfolio .container .section-title-container .section-title-background {
-  left: -40px;
-  width: 240px;
+  width: 260px;
   background-color: #CCC;
+}
+#portfolio .container .section-title-container .section-title {
+  left: 10px;
 }
 #portfolio .container #projects {
   display: grid;
   grid-auto-rows: 200px;
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   list-style-type: none;
+}
+@media only screen and (min-width: 768px) {
+  #portfolio .container #projects {
+    grid-auto-rows: 250px;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #portfolio .container #projects {
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+  }
 }
 #portfolio .container #projects .project {
   position: relative;
@@ -191,13 +328,13 @@ header nav ul {
   opacity: 0.1;
 }
 #portfolio .container #projects .project .wrapper {
-  padding: 20px;
+  padding: 30px;
 }
 #portfolio .container #projects .project .wrapper h1 {
   font-size: 18px;
-  margin-bottom: 20px;
 }
 #portfolio .container #projects .project .wrapper p:last-of-type {
+  margin-top: 20px;
   font-weight: 700;
 }
 
@@ -232,10 +369,10 @@ header nav ul {
   color: #CCC;
 }
 #contact .container .section-title-container {
-  width: 140px;
+  width: 110px;
 }
 #contact .container .section-title-container .section-title-background {
-  left: 40px;
+  left: 10px;
   width: 100px;
   background-color: #001423;
 }
@@ -255,6 +392,14 @@ header nav ul {
   font-family: "Roboto";
   font-size: 16px;
 }
+@media only screen and (min-width: 768px) {
+  #contact .container form input[name=emailAddress] {
+    grid-column: 2;
+  }
+  #contact .container form input[name=subject] {
+    grid-column: 1/3;
+  }
+}
 #contact .container form textarea {
   grid-row-end: span 15;
   padding: 10px;
@@ -264,11 +409,21 @@ header nav ul {
   font-family: "Roboto";
   font-size: 16px;
 }
+@media only screen and (min-width: 768px) {
+  #contact .container form textarea {
+    grid-column: 1/3;
+  }
+}
 #contact .container form button {
   height: 50px;
   background-color: #FFF;
   font-family: "Roboto";
   font-size: 16px;
+}
+@media only screen and (min-width: 768px) {
+  #contact .container form button {
+    grid-column: 2;
+  }
 }
 
 footer {
@@ -281,9 +436,8 @@ footer div {
 }
 footer div a {
   display: block;
-  width: 32px;
-  height: 32px;
   margin: 50px 10px;
+  font-size: 0;
 }
 footer div a:nth-of-type(1) {
   background: url("/images/icon_instagram.svg") no-repeat;
@@ -291,9 +445,22 @@ footer div a:nth-of-type(1) {
 footer div a:nth-of-type(2) {
   background: url("/images/icon_github.svg") no-repeat;
 }
-footer a {
-  display: block;
-  padding-bottom: 50px;
+footer > a {
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.icon-social {
+  width: 32px;
+  height: 32px;
+}
+
+.text-dark {
+  color: #777;
+}
+
+.highlight {
+  border-bottom: 3px solid #CCC;
 }
 
 /*# sourceMappingURL=style.css.map */
