@@ -29,6 +29,11 @@ a:visited
 {
     padding: 100px 20px;
     margin: 0 auto;
+
+    @media only screen and (min-width: 1200px)
+    {
+        padding: 100px 0;
+    }
 }
 
 header
@@ -67,6 +72,7 @@ header
             {
                 width: 32px;
                 height: 32px;
+                margin: auto 20px auto 0;
                 background-image: url("/images/logo.png");
             }
         }
@@ -165,7 +171,6 @@ header
 
     .container
     {
-        max-width: 500px;
         margin: 0 auto;
 
         @media only screen and (min-width: 1200px)
@@ -180,6 +185,11 @@ header
             width: 280px;
             height: 485px;
             margin: 0 auto 50px;
+
+            @media only screen and (min-width: 1200px)
+            {
+                margin: 0 0;
+            }
 
             #picture-background
             {
@@ -203,10 +213,15 @@ header
 
         #about-wrapper
         {
+            max-width: 500px;
+            margin: 0 auto;
+
             @media only screen and (min-width: 1200px)
             {
+                max-width: 880px;
+                margin: 0 0;
                 margin-top: 132px;
-                margin-left: 170px;
+                margin-left: 20px;
             }
 
             p
@@ -240,7 +255,6 @@ header
 
     .container
     {
-        max-width: 500px;
         margin: 0 auto;
 
         @media only screen and (min-width: 1200px)
@@ -252,9 +266,9 @@ header
         {
             width: 275px;
 
-            @media only screen and (min-width: 1200px)
+            @media only screen and (min-width: 768px)
             {
-                margin: 0 0;
+                width: 555px;
             }
 
             .section-title-background
@@ -262,6 +276,12 @@ header
                 left: 10px;
                 width: 265px;
                 background-color: #FFF;
+
+                @media only screen and (min-width: 768px)
+                {
+                    left: 20px;
+                    width: 535px;
+                }
             }
         }
 
@@ -318,6 +338,8 @@ header
 
                 p
                 {
+                    max-width: 500px;
+                    margin: 0 auto;
                     line-height: 24px;
 
                     @media only screen and (min-width: 1200px)
@@ -345,21 +367,35 @@ header
         {
             width: 270px;
 
+            @media only screen and (min-width: 768px)
+            {
+                width: 540px;
+            }
+
             @media only screen and (min-width: 1200px)
             {
-                left: 870px;
-                margin: 0 0;
+                left: 640px;
             }
 
             .section-title-background
             {
                 width: 260px;
                 background-color: #CCC;
+
+                @media only screen and (min-width: 768px)
+                {
+                    width: 520px;
+                }
             }
 
             .section-title
             {
                 left: 10px;
+
+                @media only screen and (min-width: 768px)
+                {
+                    left: 20px;
+                }
             }
         }
 
@@ -446,8 +482,18 @@ header
 .section-title-container
 {
     position: relative;
-    height: 90px;
-    margin: 0 auto;
+    height: 40px;
+    margin: 0 auto 50px;
+
+    @media only screen and (min-width: 768px)
+    {
+        height: 80px;
+    }
+
+    @media only screen and (min-width: 1200px)
+    {
+        margin: 0 0 100px 0;
+    }
 }
 
 .section-title-background
@@ -455,6 +501,12 @@ header
     position: absolute;
     top: 15px;
     height: 25px;
+
+    @media only screen and (min-width: 768px)
+    {
+        top: 30px;
+        height: 50px;
+    }
 }
 
 .section-title
@@ -463,6 +515,11 @@ header
     font-family: "Montserrat";
     font-size: 24px;
     font-weight: 700;
+
+    @media only screen and (min-width: 768px)
+    {
+        font-size: 48px;
+    }
 }
 
 .icon-service
@@ -480,15 +537,31 @@ header
 
     .container
     {
+        @media only screen and (min-width: 1200px)
+        {
+            max-width: 1180px;
+        }
+
         .section-title-container
         {
             width: 110px;
+
+            @media only screen and (min-width: 768px)
+            {
+                width: 220px;
+            }
 
             .section-title-background
             {
                 left: 10px;
                 width: 100px;
                 background-color: #001423;
+
+                @media only screen and (min-width: 768px)
+                {
+                    left: 20px;
+                    width: 200px;
+                }
             }
 
             .section-title
@@ -544,11 +617,6 @@ header
 
             button
             {
-                height: 50px;
-                background-color: #FFF;
-                font-family: "Roboto";
-                font-size: 16px;
-
                 @media only screen and (min-width: 768px)
                 {
                     grid-column: 2;
@@ -607,4 +675,17 @@ footer
 .highlight
 {
     border-bottom: 3px solid #CCC;
+}
+
+button
+{
+    height: 50px;
+    background-color: #FFF;
+    font-family: "Roboto";
+    font-size: 16px;
+
+    &:hover
+    {
+        cursor: pointer;
+    }
 }

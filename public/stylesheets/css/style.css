@@ -24,6 +24,11 @@ a:visited {
   padding: 100px 20px;
   margin: 0 auto;
 }
+@media only screen and (min-width: 1200px) {
+  .container {
+    padding: 100px 0;
+  }
+}
 
 header {
   position: fixed;
@@ -58,6 +63,7 @@ header nav div {
   header nav div {
     width: 32px;
     height: 32px;
+    margin: auto 20px auto 0;
     background-image: url("/images/logo.png");
   }
 }
@@ -139,7 +145,6 @@ header nav ul li {
   color: #CCC;
 }
 #about .container {
-  max-width: 500px;
   margin: 0 auto;
 }
 @media only screen and (min-width: 1200px) {
@@ -153,6 +158,11 @@ header nav ul li {
   width: 280px;
   height: 485px;
   margin: 0 auto 50px;
+}
+@media only screen and (min-width: 1200px) {
+  #about .container #picture-container {
+    margin: 0 0;
+  }
 }
 #about .container #picture-container #picture-background {
   position: absolute;
@@ -169,10 +179,16 @@ header nav ul li {
   background: url("/images/hudsonlessa_lowpoly.png") no-repeat;
   background-size: contain;
 }
+#about .container #about-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
 @media only screen and (min-width: 1200px) {
   #about .container #about-wrapper {
+    max-width: 880px;
+    margin: 0 0;
     margin-top: 132px;
-    margin-left: 170px;
+    margin-left: 20px;
   }
 }
 #about .container #about-wrapper p {
@@ -195,7 +211,6 @@ header nav ul li {
   color: #001423;
 }
 #services .container {
-  max-width: 500px;
   margin: 0 auto;
 }
 @media only screen and (min-width: 1200px) {
@@ -206,15 +221,21 @@ header nav ul li {
 #services .container .section-title-container {
   width: 275px;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   #services .container .section-title-container {
-    margin: 0 0;
+    width: 555px;
   }
 }
 #services .container .section-title-container .section-title-background {
   left: 10px;
   width: 265px;
   background-color: #FFF;
+}
+@media only screen and (min-width: 768px) {
+  #services .container .section-title-container .section-title-background {
+    left: 20px;
+    width: 535px;
+  }
 }
 #services .container ul {
   list-style-type: none;
@@ -247,6 +268,8 @@ header nav ul li {
   font-weight: 400;
 }
 #services .container ul .service p {
+  max-width: 500px;
+  margin: 0 auto;
   line-height: 24px;
 }
 @media only screen and (min-width: 1200px) {
@@ -266,18 +289,32 @@ header nav ul li {
 #portfolio .container .section-title-container {
   width: 270px;
 }
+@media only screen and (min-width: 768px) {
+  #portfolio .container .section-title-container {
+    width: 540px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   #portfolio .container .section-title-container {
-    left: 870px;
-    margin: 0 0;
+    left: 640px;
   }
 }
 #portfolio .container .section-title-container .section-title-background {
   width: 260px;
   background-color: #CCC;
 }
+@media only screen and (min-width: 768px) {
+  #portfolio .container .section-title-container .section-title-background {
+    width: 520px;
+  }
+}
 #portfolio .container .section-title-container .section-title {
   left: 10px;
+}
+@media only screen and (min-width: 768px) {
+  #portfolio .container .section-title-container .section-title {
+    left: 20px;
+  }
 }
 #portfolio .container #projects {
   display: grid;
@@ -340,8 +377,18 @@ header nav ul li {
 
 .section-title-container {
   position: relative;
-  height: 90px;
-  margin: 0 auto;
+  height: 40px;
+  margin: 0 auto 50px;
+}
+@media only screen and (min-width: 768px) {
+  .section-title-container {
+    height: 80px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .section-title-container {
+    margin: 0 0 100px 0;
+  }
 }
 
 .section-title-background {
@@ -349,12 +396,23 @@ header nav ul li {
   top: 15px;
   height: 25px;
 }
+@media only screen and (min-width: 768px) {
+  .section-title-background {
+    top: 30px;
+    height: 50px;
+  }
+}
 
 .section-title {
   position: absolute;
   font-family: "Montserrat";
   font-size: 24px;
   font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  .section-title {
+    font-size: 48px;
+  }
 }
 
 .icon-service {
@@ -368,13 +426,29 @@ header nav ul li {
   background-size: 1000px, cover;
   color: #CCC;
 }
+@media only screen and (min-width: 1200px) {
+  #contact .container {
+    max-width: 1180px;
+  }
+}
 #contact .container .section-title-container {
   width: 110px;
+}
+@media only screen and (min-width: 768px) {
+  #contact .container .section-title-container {
+    width: 220px;
+  }
 }
 #contact .container .section-title-container .section-title-background {
   left: 10px;
   width: 100px;
   background-color: #001423;
+}
+@media only screen and (min-width: 768px) {
+  #contact .container .section-title-container .section-title-background {
+    left: 20px;
+    width: 200px;
+  }
 }
 #contact .container .section-title-container .section-title {
   color: #CCC;
@@ -413,12 +487,6 @@ header nav ul li {
   #contact .container form textarea {
     grid-column: 1/3;
   }
-}
-#contact .container form button {
-  height: 50px;
-  background-color: #FFF;
-  font-family: "Roboto";
-  font-size: 16px;
 }
 @media only screen and (min-width: 768px) {
   #contact .container form button {
@@ -461,6 +529,16 @@ footer > a {
 
 .highlight {
   border-bottom: 3px solid #CCC;
+}
+
+button {
+  height: 50px;
+  background-color: #FFF;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

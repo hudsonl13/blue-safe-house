@@ -140,24 +140,6 @@
                                 <p>HTML, CSS, JavaScript, Node.JS, MongoDB</p>
                             </div>
                         </li>
-
-                        <li class = "project" onclick = "void(0)">
-                            <h1>E-STOP</h1>
-                            <p>Sistema de Gerenciamento de Estacionamento</p>
-                            <p>Java, MySQL</p>
-                        </li>
-
-                        <li class = "project" onclick = "void(0)">
-                            <h1>E-STOP</h1>
-                            <p>Sistema de Gerenciamento de Estacionamento</p>
-                            <p>Java, MySQL</p>
-                        </li>
-
-                        <li class = "project" onclick = "void(0)">
-                            <h1>E-STOP</h1>
-                            <p>Sistema de Gerenciamento de Estacionamento</p>
-                            <p>Java, MySQL</p>
-                        </li>
                     </ul>
                 </div>
             </section>
@@ -170,11 +152,11 @@
                     <h1 class = "section-title">Contato</h1>
                 </div>
 
-                <form>
-                    <input type = "text" name = "name" placeholder = "Nome">
-                    <input type = "text" name = "emailAddress" placeholder = "Endereço de email">
-                    <input type = "text" name = "subject" placeholder = "Assunto">
-                    <textarea name = "message" placeholder = "Mensagem"></textarea>
+                <form action = "/email" method = "post">
+                    <input required type = "text" name = "name" placeholder = "Nome">
+                    <input required type = "text" name = "emailAddress" placeholder = "Endereço de email">
+                    <input required type = "text" name = "subject" placeholder = "Assunto">
+                    <textarea required name = "message" placeholder = "Mensagem"></textarea>
                     <button>ENVIAR</button>
                 </form>
             </div>
@@ -187,7 +169,7 @@
             <a class = "icon-social" href = "http://github.com/hudsonl13">GitHub</a>
         </div>
 
-        <a href = "#">Política de Privacidade (em inglês)</a>
+        <a href = "http://privacypolicies.com/privacy/view/6e7b0671833e94f2947a1ebf0485306a">Política de Privacidade (em inglês)</a>
     </footer>
 </body>
 </html>
