@@ -82,37 +82,37 @@ header nav ul li {
   text-transform: uppercase;
 }
 
-#hero {
+#inicio {
   height: 700px;
   background: url("/images/mountains_lowpoly.png") no-repeat center bottom, url("/images/binarycode_black.svg") center top, linear-gradient(#000, #001423);
   background-size: auto, 1000px, cover;
 }
 @media only screen and (min-width: 768px) {
-  #hero {
+  #inicio {
     height: 1000px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #hero {
+  #inicio {
     height: 900px;
   }
 }
-#hero div {
+#inicio div {
   padding-top: 180px;
   text-align: center;
   color: #CCC;
 }
 @media only screen and (min-width: 768px) {
-  #hero div {
+  #inicio div {
     padding-top: 300px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #hero div {
+  #inicio div {
     padding-top: 250px;
   }
 }
-#hero div h1 {
+#inicio div h1 {
   padding-left: 10px;
   font-family: "Josefin Sans";
   font-size: 24px;
@@ -121,50 +121,50 @@ header nav ul li {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 768px) {
-  #hero div h1 {
+  #inicio div h1 {
     font-size: 48px;
     letter-spacing: 19.2px;
   }
 }
-#hero div h1 span {
+#inicio div h1 span {
   font-weight: 100;
 }
-#hero div p {
+#inicio div p {
   font-weight: 100;
   text-transform: lowercase;
 }
 @media only screen and (min-width: 768px) {
-  #hero div p {
+  #inicio div p {
     font-size: 28px;
   }
 }
 
-#about {
+#sobre {
   background-color: #000;
   font-weight: 300;
   color: #CCC;
 }
-#about .container {
+#sobre .container {
   margin: 0 auto;
 }
 @media only screen and (min-width: 1200px) {
-  #about .container {
+  #sobre .container {
     display: flex;
     max-width: 1180px;
   }
 }
-#about .container #picture-container {
+#sobre .container #picture-container {
   position: relative;
   width: 280px;
   height: 485px;
   margin: 0 auto 50px;
 }
 @media only screen and (min-width: 1200px) {
-  #about .container #picture-container {
+  #sobre .container #picture-container {
     margin: 0 0;
   }
 }
-#about .container #picture-container #picture-background {
+#sobre .container #picture-container #picture-background {
   position: absolute;
   top: 135px;
   left: 110px;
@@ -172,33 +172,33 @@ header nav ul li {
   height: 350px;
   background-color: #CCC;
 }
-#about .container #picture-container #picture {
+#sobre .container #picture-container #picture {
   position: absolute;
   width: 260px;
   height: 430px;
   background: url("/images/hudsonlessa_lowpoly.png") no-repeat;
   background-size: contain;
 }
-#about .container #about-wrapper {
+#sobre .container #about-wrapper {
   max-width: 500px;
   margin: 0 auto;
 }
 @media only screen and (min-width: 1200px) {
-  #about .container #about-wrapper {
+  #sobre .container #about-wrapper {
     max-width: 880px;
     margin: 0 0;
     margin-top: 132px;
     margin-left: 20px;
   }
 }
-#about .container #about-wrapper p {
+#sobre .container #about-wrapper p {
   margin-bottom: 20px;
   line-height: 24px;
 }
-#about .container #about-wrapper p:first-of-type {
+#sobre .container #about-wrapper p:first-of-type {
   margin-bottom: 50px;
 }
-#about .container #about-wrapper p:last-of-type {
+#sobre .container #about-wrapper p:last-of-type {
   margin-bottom: 0;
 }
 
@@ -207,73 +207,73 @@ header nav ul li {
   background-size: 1000px, cover;
 }
 
-#services {
+#servicos {
   color: #001423;
 }
-#services .container {
+#servicos .container {
   margin: 0 auto;
 }
 @media only screen and (min-width: 1200px) {
-  #services .container {
+  #servicos .container {
     max-width: 1180px;
   }
 }
-#services .container .section-title-container {
+#servicos .container .section-title-container {
   width: 275px;
 }
 @media only screen and (min-width: 768px) {
-  #services .container .section-title-container {
+  #servicos .container .section-title-container {
     width: 555px;
   }
 }
-#services .container .section-title-container .section-title-background {
+#servicos .container .section-title-container .section-title-background {
   left: 10px;
   width: 265px;
   background-color: #FFF;
 }
 @media only screen and (min-width: 768px) {
-  #services .container .section-title-container .section-title-background {
+  #servicos .container .section-title-container .section-title-background {
     left: 20px;
     width: 535px;
   }
 }
-#services .container ul {
+#servicos .container ul {
   list-style-type: none;
 }
 @media only screen and (min-width: 1200px) {
-  #services .container ul {
+  #servicos .container ul {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
   }
 }
-#services .container ul .service {
+#servicos .container ul .service {
   margin-bottom: 100px;
   text-align: center;
 }
-#services .container ul .service:last-of-type {
+#servicos .container ul .service:last-of-type {
   margin-bottom: 0;
 }
-#services .container ul .service:nth-of-type(1) .icon-service {
+#servicos .container ul .service:nth-of-type(1) .icon-service {
   background: url("/images/icon_webpage.svg") no-repeat;
 }
-#services .container ul .service:nth-of-type(2) .icon-service {
+#servicos .container ul .service:nth-of-type(2) .icon-service {
   background: url("/images/icon_smartphone.svg") no-repeat;
 }
-#services .container ul .service:nth-of-type(3) .icon-service {
+#servicos .container ul .service:nth-of-type(3) .icon-service {
   background: url("/images/icon_monitor.svg") no-repeat;
 }
-#services .container ul .service h1 {
+#servicos .container ul .service h1 {
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: 400;
 }
-#services .container ul .service p {
+#servicos .container ul .service p {
   max-width: 500px;
   margin: 0 auto;
   line-height: 24px;
 }
 @media only screen and (min-width: 1200px) {
-  #services .container ul .service p {
+  #servicos .container ul .service p {
     padding: 0 20px;
   }
 }
@@ -421,45 +421,45 @@ header nav ul li {
   margin: 0 auto 20px;
 }
 
-#contact {
+#contato {
   background: url("/images/binarycode_black.svg") center top, linear-gradient(#000, #001423);
   background-size: 1000px, cover;
   color: #CCC;
 }
 @media only screen and (min-width: 1200px) {
-  #contact .container {
+  #contato .container {
     max-width: 1180px;
   }
 }
-#contact .container .section-title-container {
+#contato .container .section-title-container {
   width: 110px;
 }
 @media only screen and (min-width: 768px) {
-  #contact .container .section-title-container {
+  #contato .container .section-title-container {
     width: 220px;
   }
 }
-#contact .container .section-title-container .section-title-background {
+#contato .container .section-title-container .section-title-background {
   left: 10px;
   width: 100px;
   background-color: #001423;
 }
 @media only screen and (min-width: 768px) {
-  #contact .container .section-title-container .section-title-background {
+  #contato .container .section-title-container .section-title-background {
     left: 20px;
     width: 200px;
   }
 }
-#contact .container .section-title-container .section-title {
+#contato .container .section-title-container .section-title {
   color: #CCC;
 }
-#contact .container form {
+#contato .container form {
   display: grid;
   grid-gap: 10px;
   grid-auto-columns: 245px;
   justify-content: center;
 }
-#contact .container form input {
+#contato .container form input {
   height: 30px;
   padding: 10px;
   border-radius: 0;
@@ -467,14 +467,14 @@ header nav ul li {
   font-size: 16px;
 }
 @media only screen and (min-width: 768px) {
-  #contact .container form input[name=emailAddress] {
+  #contato .container form input[name=emailAddress] {
     grid-column: 2;
   }
-  #contact .container form input[name=subject] {
+  #contato .container form input[name=subject] {
     grid-column: 1/3;
   }
 }
-#contact .container form textarea {
+#contato .container form textarea {
   grid-row-end: span 15;
   padding: 10px;
   border-radius: 0;
@@ -484,12 +484,12 @@ header nav ul li {
   font-size: 16px;
 }
 @media only screen and (min-width: 768px) {
-  #contact .container form textarea {
+  #contato .container form textarea {
     grid-column: 1/3;
   }
 }
 @media only screen and (min-width: 768px) {
-  #contact .container form button {
+  #contato .container form button {
     grid-column: 2;
   }
 }
@@ -536,6 +536,7 @@ button {
   background-color: #FFF;
   font-family: "Roboto";
   font-size: 16px;
+  text-transform: uppercase;
 }
 button:hover {
   cursor: pointer;

@@ -97,7 +97,7 @@ header
     }
 }
 
-#hero
+#inicio
 {
     height: 700px;
     background: url("/images/mountains_lowpoly.png") no-repeat center bottom , url("/images/binarycode_black.svg") center top , linear-gradient(#000 , #001423);
@@ -163,7 +163,7 @@ header
     }
 }
 
-#about
+#sobre
 {
     background-color: #000;
     font-weight: 300;
@@ -249,7 +249,7 @@ header
     background-size: 1000px , cover;
 }
 
-#services
+#servicos
 {
     color: #001423;
 
@@ -529,7 +529,7 @@ header
     margin: 0 auto 20px;
 }
 
-#contact
+#contato
 {
     background: url("/images/binarycode_black.svg") center top , linear-gradient(#000 , #001423);
     background-size: 1000px , cover;
@@ -683,6 +683,7 @@ button
     background-color: #FFF;
     font-family: "Roboto";
     font-size: 16px;
+    text-transform: uppercase;
 
     &:hover
     {
