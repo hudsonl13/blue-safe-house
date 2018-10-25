@@ -141,7 +141,6 @@ header nav ul li {
 
 #sobre {
   background-color: #000;
-  font-weight: 300;
   color: #CCC;
 }
 #sobre .container {
@@ -257,10 +256,10 @@ header nav ul li {
   background: url("/images/icon_webpage.svg") no-repeat;
 }
 #servicos .container ul .service:nth-of-type(2) .icon-service {
-  background: url("/images/icon_smartphone.svg") no-repeat;
+  background: url("/images/icon_webpageandgear.svg") no-repeat;
 }
 #servicos .container ul .service:nth-of-type(3) .icon-service {
-  background: url("/images/icon_monitor.svg") no-repeat;
+  background: url("/images/icon_smartphone.svg") no-repeat;
 }
 #servicos .container ul .service h1 {
   margin-bottom: 20px;
