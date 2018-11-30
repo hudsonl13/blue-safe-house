@@ -420,6 +420,38 @@ header nav ul li {
   margin: 0 auto 20px;
 }
 
+#testimonials .container .section-title {
+  position: static;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 50px;
+  background: url("/images/quotation-mark.svg") center no-repeat;
+}
+#testimonials .container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#testimonials .container div .corp-logo {
+  width: 250px;
+  height: 75px;
+  margin-bottom: 20px;
+  background: url("/images/trip-zorro_logo.png") center no-repeat;
+}
+#testimonials .container div p {
+  text-align: center;
+  line-height: 24px;
+  color: #001423;
+}
+#testimonials .container div p span {
+  font-weight: 700;
+}
+#testimonials .container div p span a {
+  text-decoration: underline;
+  color: inherit;
+}
+
 #contato {
   background: url("/images/binarycode_black.svg") center top, linear-gradient(#000, #001423);
   background-size: 1000px, cover;
