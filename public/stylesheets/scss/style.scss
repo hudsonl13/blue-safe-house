@@ -16,13 +16,7 @@ body
 
 a
 {
-    color: #CCC;
-    text-decoration: none;
-}
-
-a:visited
-{
-    color: #CCC;
+    transition: .2s;
 }
 
 .container
@@ -61,15 +55,26 @@ header
             justify-content: normal;
         }
 
-        div
+        #collapsible-menu-button
         {
             width: 20px;
             height: 15px;
             margin: auto 20px;
-            background-image: url("/images/hamburger.svg");
+            background-image: url("/images/icon_collapsible-menu.svg");
 
             @media (min-width: 768px)
             {
+                display: none;
+            }
+        }
+
+        div:nth-of-type(2)
+        {
+            display: none;
+
+            @media (min-width: 768px)
+            {
+                display: block;
                 width: 32px;
                 height: 32px;
                 margin: auto 20px auto 0;
@@ -92,6 +97,22 @@ header
                 margin: 0 20px;
                 font-family: "Montserrat";
                 text-transform: uppercase;
+
+                a
+                {
+                    color: #CCC;
+                    text-decoration: none;
+
+                    &:visited
+                    {
+                        color: #CCC;
+                    }
+
+                    &:hover
+                    {
+                        color: #FFF;
+                    }
+                }
             }
         }
     }
@@ -451,6 +472,7 @@ header
                     top: 0;
                     left: 0;
                     opacity: 1;
+                    transition: .2s;
                 }
 
                 &:hover::after
@@ -568,11 +590,20 @@ header
 
                     a
                     {
-                        text-decoration: underline;
                         color: inherit;
+                        transition: .2s;
+
+                        &:visited
+                        {
+                            color: inherit;
+                        }
+
+                        &:hover
+                        {
+                            color: #000;
+                        }
                     }
                 }
-
             }
         }
     }
@@ -667,9 +698,16 @@ header
 
             button
             {
+                background-color: #FFF;
+
                 @media (min-width: 768px)
                 {
                     grid-column: 2;
+                }
+
+                &:hover
+                {
+                    box-shadow: 0 0 1px #FFF;
                 }
             }
         }
@@ -680,6 +718,39 @@ footer
 {
     background-color: #000;
     text-align: center;
+
+    nav
+    {
+        position: fixed;
+        top: 50px;
+        left: -200px;
+        width: 200px;
+        height: 100%;
+        background-color: #000;
+        transition: .2s;
+
+        @media (min-width: 768px)
+        {
+            display: none;
+        }
+
+        ul
+        {
+            flex-direction: column;
+
+            li
+            {
+                margin: 20px;
+                text-align: left;
+
+                a
+                {
+                    color: #CCC;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 
     div
     {
@@ -704,11 +775,27 @@ footer
         }
     }
 
-    & > a
+    > a
     {
         display: inline-block;
         margin-bottom: 50px;
+        color: #CCC;
+
+        &:visited
+        {
+            color: #CCC;
+        }
+
+        &:hover
+        {
+            color: #FFF;
+        }
     }
+}
+
+.menu-active
+{
+    left: 0;
 }
 
 .icon-social
@@ -730,10 +817,10 @@ footer
 button
 {
     height: 50px;
-    background-color: #FFF;
     font-family: "Roboto";
     font-size: 16px;
     text-transform: uppercase;
+    transition: .2s;
 
     &:hover
     {

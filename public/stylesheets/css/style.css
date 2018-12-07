@@ -12,12 +12,7 @@ body {
 }
 
 a {
-  color: #CCC;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #CCC;
+  transition: 0.2s;
 }
 
 .container {
@@ -53,14 +48,23 @@ header nav {
     justify-content: normal;
   }
 }
-header nav div {
+header nav #collapsible-menu-button {
   width: 20px;
   height: 15px;
   margin: auto 20px;
-  background-image: url("/images/hamburger.svg");
+  background-image: url("/images/icon_collapsible-menu.svg");
 }
 @media (min-width: 768px) {
-  header nav div {
+  header nav #collapsible-menu-button {
+    display: none;
+  }
+}
+header nav div:nth-of-type(2) {
+  display: none;
+}
+@media (min-width: 768px) {
+  header nav div:nth-of-type(2) {
+    display: block;
     width: 32px;
     height: 32px;
     margin: auto 20px auto 0;
@@ -80,6 +84,16 @@ header nav ul li {
   margin: 0 20px;
   font-family: "Montserrat";
   text-transform: uppercase;
+}
+header nav ul li a {
+  color: #CCC;
+  text-decoration: none;
+}
+header nav ul li a:visited {
+  color: #CCC;
+}
+header nav ul li a:hover {
+  color: #FFF;
 }
 
 #inicio {
@@ -359,6 +373,7 @@ header nav ul li {
   top: 0;
   left: 0;
   opacity: 1;
+  transition: 0.2s;
 }
 #portfolio .container #projects .project:hover::after {
   opacity: 0.1;
@@ -448,8 +463,14 @@ header nav ul li {
   font-weight: 700;
 }
 #testimonials .container div p span a {
-  text-decoration: underline;
   color: inherit;
+  transition: 0.2s;
+}
+#testimonials .container div p span a:visited {
+  color: inherit;
+}
+#testimonials .container div p span a:hover {
+  color: #000;
 }
 
 #contato {
@@ -520,15 +541,46 @@ header nav ul li {
     grid-column: 1/3;
   }
 }
+#contato .container form button {
+  background-color: #FFF;
+}
 @media (min-width: 768px) {
   #contato .container form button {
     grid-column: 2;
   }
 }
+#contato .container form button:hover {
+  box-shadow: 0 0 1px #FFF;
+}
 
 footer {
   background-color: #000;
   text-align: center;
+}
+footer nav {
+  position: fixed;
+  top: 50px;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: #000;
+  transition: 0.2s;
+}
+@media (min-width: 768px) {
+  footer nav {
+    display: none;
+  }
+}
+footer nav ul {
+  flex-direction: column;
+}
+footer nav ul li {
+  margin: 20px;
+  text-align: left;
+}
+footer nav ul li a {
+  color: #CCC;
+  text-decoration: none;
 }
 footer div {
   display: flex;
@@ -548,6 +600,17 @@ footer div a:nth-of-type(2) {
 footer > a {
   display: inline-block;
   margin-bottom: 50px;
+  color: #CCC;
+}
+footer > a:visited {
+  color: #CCC;
+}
+footer > a:hover {
+  color: #FFF;
+}
+
+.menu-active {
+  left: 0;
 }
 
 .icon-social {
@@ -565,10 +628,10 @@ footer > a {
 
 button {
   height: 50px;
-  background-color: #FFF;
   font-family: "Roboto";
   font-size: 16px;
   text-transform: uppercase;
+  transition: 0.2s;
 }
 button:hover {
   cursor: pointer;
