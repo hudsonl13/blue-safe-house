@@ -263,6 +263,11 @@ header nav ul li a:hover {
   margin-bottom: 100px;
   text-align: center;
 }
+@media (min-width: 1200px) {
+  #servicos .container ul .service {
+    margin-bottom: 0;
+  }
+}
 #servicos .container ul .service:last-of-type {
   margin-bottom: 0;
 }
@@ -442,34 +447,44 @@ header nav ul li a:hover {
   margin: 0 auto 50px;
   background: url("/images/quotation-mark.svg") center no-repeat;
 }
-#testimonials .container div {
+#testimonials .container .testimonial {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
-#testimonials .container div .corp-logo {
+#testimonials .container .testimonial:nth-of-type(2) .corp-logo {
+  background: url("/images/trip-zorro_logo.png") center/contain no-repeat;
+}
+#testimonials .container .testimonial:nth-of-type(3) .corp-logo {
+  background: url("/images/yuri-games_title_black.png") center/contain no-repeat;
+}
+#testimonials .container .testimonial:last-of-type {
+  margin-bottom: 0;
+}
+#testimonials .container .testimonial .corp-logo {
   width: 250px;
   height: 75px;
   margin-bottom: 20px;
-  background: url("/images/trip-zorro_logo.png") center no-repeat;
 }
-#testimonials .container div p {
-  text-align: center;
+#testimonials .container .testimonial p {
+  max-width: 480px;
   line-height: 24px;
+  text-align: center;
   color: #001423;
 }
-#testimonials .container div p span {
+#testimonials .container .testimonial p span {
   font-weight: 700;
 }
-#testimonials .container div p span a {
+#testimonials .container .testimonial p span a {
   color: inherit;
   transition: 0.2s;
 }
-#testimonials .container div p span a:visited {
+#testimonials .container .testimonial p span a:visited {
   color: inherit;
 }
-#testimonials .container div p span a:hover {
+#testimonials .container .testimonial p span a:hover {
   color: #000;
 }
 

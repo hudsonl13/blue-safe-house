@@ -320,6 +320,11 @@ header
                 margin-bottom: 100px;
                 text-align: center;
 
+                @media (min-width: 1200px)
+                {
+                    margin-bottom: 0;
+                }
+
                 &:last-of-type
                 {
                     margin-bottom: 0;
@@ -563,25 +568,47 @@ header
             background: url("/images/quotation-mark.svg") center no-repeat;
         }
 
-        div
+        .testimonial
         {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-bottom: 50px;
+
+            &:nth-of-type(2)
+            {
+                .corp-logo
+                {
+                    background: url("/images/trip-zorro_logo.png") center/contain no-repeat;
+                }
+            }
+
+            &:nth-of-type(3)
+            {
+                .corp-logo
+                {
+                    background: url("/images/yuri-games_title_black.png") center/contain no-repeat;
+                }
+            }
+
+            &:last-of-type
+            {
+                margin-bottom: 0;
+            }
 
             .corp-logo
             {
                 width: 250px;
                 height: 75px;
                 margin-bottom: 20px;
-                background: url("/images/trip-zorro_logo.png") center no-repeat;
             }
 
             p
             {
-                text-align: center;
+                max-width: 480px;
                 line-height: 24px;
+                text-align: center;
                 color: #001423;
 
                 span
