@@ -182,6 +182,15 @@ header
             }
         }
     }
+
+    a
+    {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin: 20px auto 0;
+        background: url("/images/icon_down-arrow.svg") center no-repeat;
+    }
 }
 
 #sobre
@@ -390,26 +399,26 @@ header
 
         .section-title-container
         {
-            width: 270px;
+            width: 230px;
 
             @media (min-width: 768px)
             {
-                width: 540px;
+                width: 460px;
             }
 
             @media (min-width: 1200px)
             {
-                left: 640px;
+                left: 725px;
             }
 
             .section-title-background
             {
-                width: 260px;
+                width: 220px;
                 background-color: #CCC;
 
                 @media (min-width: 768px)
                 {
-                    width: 520px;
+                    width: 435px;
                 }
             }
 
