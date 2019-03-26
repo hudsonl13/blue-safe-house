@@ -1,2 +1,13 @@
 # blue-safe-house
-Hudson Lessa's Home Page
+
+Minha home page<br>
+*My home page*
+
+**Tecnologias utilizadas:**<br>
+***Built on:***
+
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* Express
