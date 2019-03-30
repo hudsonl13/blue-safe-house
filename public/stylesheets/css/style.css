@@ -40,11 +40,13 @@ header nav {
 }
 @media (min-width: 768px) {
   header nav {
+    padding: 0 20px;
     justify-content: center;
   }
 }
 @media (min-width: 1200px) {
   header nav {
+    padding: 0;
     justify-content: normal;
   }
 }
@@ -80,6 +82,27 @@ header nav ul {
     display: flex;
   }
 }
+header nav ul#language {
+  margin-left: auto;
+}
+header nav ul#language li {
+  margin: 0;
+}
+header nav ul#language li:first-of-type {
+  margin-right: 20px;
+}
+header nav ul#language li:first-of-type a {
+  background: url("/images/flag_brazil.svg") center no-repeat;
+}
+header nav ul#language li:last-of-type a {
+  background: url("/images/flag_usa.svg") center no-repeat;
+}
+header nav ul#language li a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+}
 header nav ul li {
   margin: 0 20px;
   font-family: "Montserrat";
@@ -96,37 +119,37 @@ header nav ul li a:hover {
   color: #FFF;
 }
 
-#inicio {
+#inicio, #start {
   height: 700px;
   background: url("/images/mountains_lowpoly.png") no-repeat center bottom, url("/images/binarycode_black.svg") center top, linear-gradient(#000, #001423);
   background-size: auto, 1000px, cover;
 }
 @media (min-width: 768px) {
-  #inicio {
+  #inicio, #start {
     height: 1000px;
   }
 }
 @media (min-width: 1200px) {
-  #inicio {
+  #inicio, #start {
     height: 900px;
   }
 }
-#inicio div {
+#inicio div, #start div {
   padding-top: 180px;
   text-align: center;
   color: #CCC;
 }
 @media (min-width: 768px) {
-  #inicio div {
+  #inicio div, #start div {
     padding-top: 300px;
   }
 }
 @media (min-width: 1200px) {
-  #inicio div {
+  #inicio div, #start div {
     padding-top: 250px;
   }
 }
-#inicio div h1 {
+#inicio div h1, #start div h1 {
   padding-left: 10px;
   font-family: "Josefin Sans";
   font-size: 24px;
@@ -135,24 +158,24 @@ header nav ul li a:hover {
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  #inicio div h1 {
+  #inicio div h1, #start div h1 {
     font-size: 48px;
     letter-spacing: 19.2px;
   }
 }
-#inicio div h1 span {
+#inicio div h1 span, #start div h1 span {
   font-weight: 100;
 }
-#inicio div p {
+#inicio div p, #start div p {
   font-weight: 100;
   text-transform: lowercase;
 }
 @media (min-width: 768px) {
-  #inicio div p {
+  #inicio div p, #start div p {
     font-size: 28px;
   }
 }
-#inicio a {
+#inicio a, #start a {
   display: block;
   width: 24px;
   height: 24px;
@@ -160,31 +183,31 @@ header nav ul li a:hover {
   background: url("/images/icon_down-arrow.svg") center no-repeat;
 }
 
-#sobre {
+#sobre, #about {
   background-color: #000;
   color: #CCC;
 }
-#sobre .container {
+#sobre .container, #about .container {
   margin: 0 auto;
 }
 @media (min-width: 1200px) {
-  #sobre .container {
+  #sobre .container, #about .container {
     display: flex;
     max-width: 1180px;
   }
 }
-#sobre .container #picture-container {
+#sobre .container #picture-container, #about .container #picture-container {
   position: relative;
   width: 280px;
   height: 485px;
   margin: 0 auto 50px;
 }
 @media (min-width: 1200px) {
-  #sobre .container #picture-container {
+  #sobre .container #picture-container, #about .container #picture-container {
     margin: 0 0;
   }
 }
-#sobre .container #picture-container #picture-background {
+#sobre .container #picture-container #picture-background, #about .container #picture-container #picture-background {
   position: absolute;
   top: 135px;
   left: 110px;
@@ -192,33 +215,33 @@ header nav ul li a:hover {
   height: 350px;
   background-color: #CCC;
 }
-#sobre .container #picture-container #picture {
+#sobre .container #picture-container #picture, #about .container #picture-container #picture {
   position: absolute;
   width: 260px;
   height: 430px;
   background: url("/images/hudsonlessa_lowpoly.png") no-repeat;
   background-size: contain;
 }
-#sobre .container #about-wrapper {
+#sobre .container #about-wrapper, #about .container #about-wrapper {
   max-width: 500px;
   margin: 0 auto;
 }
 @media (min-width: 1200px) {
-  #sobre .container #about-wrapper {
+  #sobre .container #about-wrapper, #about .container #about-wrapper {
     max-width: 880px;
     margin: 0 0;
     margin-top: 132px;
     margin-left: 20px;
   }
 }
-#sobre .container #about-wrapper p {
+#sobre .container #about-wrapper p, #about .container #about-wrapper p {
   margin-bottom: 20px;
   line-height: 24px;
 }
-#sobre .container #about-wrapper p:first-of-type {
+#sobre .container #about-wrapper p:first-of-type, #about .container #about-wrapper p:first-of-type {
   margin-bottom: 50px;
 }
-#sobre .container #about-wrapper p:last-of-type {
+#sobre .container #about-wrapper p:last-of-type, #about .container #about-wrapper p:last-of-type {
   margin-bottom: 0;
 }
 
@@ -227,78 +250,94 @@ header nav ul li a:hover {
   background-size: 1000px, cover;
 }
 
-#servicos {
+#servicos, #services {
   color: #001423;
 }
-#servicos .container {
+#servicos .container, #services .container {
   margin: 0 auto;
 }
 @media (min-width: 1200px) {
-  #servicos .container {
+  #servicos .container, #services .container {
     max-width: 1180px;
   }
 }
-#servicos .container .section-title-container {
+#servicos .container .section-title-container, #services .container .section-title-container {
   width: 275px;
 }
 @media (min-width: 768px) {
-  #servicos .container .section-title-container {
+  #servicos .container .section-title-container, #services .container .section-title-container {
     width: 555px;
   }
 }
-#servicos .container .section-title-container .section-title-background {
+#servicos .container .section-title-container-en, #services .container .section-title-container-en {
+  width: 255px;
+}
+@media (min-width: 768px) {
+  #servicos .container .section-title-container-en, #services .container .section-title-container-en {
+    width: 515px;
+  }
+}
+#servicos .container .section-title-container .section-title-background, #services .container .section-title-container .section-title-background {
   left: 10px;
   width: 265px;
   background-color: #FFF;
 }
 @media (min-width: 768px) {
-  #servicos .container .section-title-container .section-title-background {
+  #servicos .container .section-title-container .section-title-background, #services .container .section-title-container .section-title-background {
     left: 20px;
     width: 535px;
   }
 }
-#servicos .container ul {
+#servicos .container .section-title-container .section-title-background-en, #services .container .section-title-container .section-title-background-en {
+  width: 245px;
+}
+@media (min-width: 768px) {
+  #servicos .container .section-title-container .section-title-background-en, #services .container .section-title-container .section-title-background-en {
+    width: 495px;
+  }
+}
+#servicos .container ul, #services .container ul {
   list-style-type: none;
 }
 @media (min-width: 1200px) {
-  #servicos .container ul {
+  #servicos .container ul, #services .container ul {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
   }
 }
-#servicos .container ul .service {
+#servicos .container ul .service, #services .container ul .service {
   margin-bottom: 100px;
   text-align: center;
 }
 @media (min-width: 1200px) {
-  #servicos .container ul .service {
+  #servicos .container ul .service, #services .container ul .service {
     margin-bottom: 0;
   }
 }
-#servicos .container ul .service:last-of-type {
+#servicos .container ul .service:last-of-type, #services .container ul .service:last-of-type {
   margin-bottom: 0;
 }
-#servicos .container ul .service:nth-of-type(1) .icon-service {
+#servicos .container ul .service:nth-of-type(1) .icon-service, #services .container ul .service:nth-of-type(1) .icon-service {
   background: url("/images/icon_webpage.svg") no-repeat;
 }
-#servicos .container ul .service:nth-of-type(2) .icon-service {
+#servicos .container ul .service:nth-of-type(2) .icon-service, #services .container ul .service:nth-of-type(2) .icon-service {
   background: url("/images/icon_webpageandgear.svg") no-repeat;
 }
-#servicos .container ul .service:nth-of-type(3) .icon-service {
+#servicos .container ul .service:nth-of-type(3) .icon-service, #services .container ul .service:nth-of-type(3) .icon-service {
   background: url("/images/icon_smartphone.svg") no-repeat;
 }
-#servicos .container ul .service h1 {
+#servicos .container ul .service h1, #services .container ul .service h1 {
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: 400;
 }
-#servicos .container ul .service p {
+#servicos .container ul .service p, #services .container ul .service p {
   max-width: 500px;
   margin: 0 auto;
   line-height: 24px;
 }
 @media (min-width: 1200px) {
-  #servicos .container ul .service p {
+  #servicos .container ul .service p, #services .container ul .service p {
     padding: 0 20px;
   }
 }
@@ -321,16 +360,37 @@ header nav ul li a:hover {
 }
 @media (min-width: 1200px) {
   #portfolio .container .section-title-container {
-    left: 725px;
+    margin-left: auto;
+  }
+}
+#portfolio .container .section-title-container-en {
+  width: 220px;
+}
+@media (min-width: 768px) {
+  #portfolio .container .section-title-container-en {
+    width: 440px;
+  }
+}
+@media (min-width: 1200px) {
+  #portfolio .container .section-title-container-en {
+    margin-left: auto;
   }
 }
 #portfolio .container .section-title-container .section-title-background {
-  width: 220px;
+  width: 208px;
   background-color: #CCC;
 }
 @media (min-width: 768px) {
   #portfolio .container .section-title-container .section-title-background {
     width: 435px;
+  }
+}
+#portfolio .container .section-title-container .section-title-background-en {
+  width: 210px;
+}
+@media (min-width: 768px) {
+  #portfolio .container .section-title-container .section-title-background-en {
+    width: 420px;
   }
 }
 #portfolio .container .section-title-container .section-title {
@@ -465,7 +525,7 @@ header nav ul li a:hover {
   background: url("/images/trip-zorro_logo.png") center/contain no-repeat;
 }
 #testimonials .container .testimonial:nth-of-type(3) .corp-logo {
-  background: url("/images/yuri-games_title_black.png") center/contain no-repeat;
+  background: url("/images/yuri-games_title_black.svg") center/contain no-repeat;
 }
 #testimonials .container .testimonial:last-of-type {
   margin-bottom: 0;
@@ -495,45 +555,45 @@ header nav ul li a:hover {
   color: #000;
 }
 
-#contato {
+#contato, #contact {
   background: url("/images/binarycode_black.svg") center top, linear-gradient(#000, #001423);
   background-size: 1000px, cover;
   color: #CCC;
 }
 @media (min-width: 1200px) {
-  #contato .container {
+  #contato .container, #contact .container {
     max-width: 1180px;
   }
 }
-#contato .container .section-title-container {
+#contato .container .section-title-container, #contact .container .section-title-container {
   width: 110px;
 }
 @media (min-width: 768px) {
-  #contato .container .section-title-container {
+  #contato .container .section-title-container, #contact .container .section-title-container {
     width: 220px;
   }
 }
-#contato .container .section-title-container .section-title-background {
+#contato .container .section-title-container .section-title-background, #contact .container .section-title-container .section-title-background {
   left: 10px;
   width: 100px;
   background-color: #001423;
 }
 @media (min-width: 768px) {
-  #contato .container .section-title-container .section-title-background {
+  #contato .container .section-title-container .section-title-background, #contact .container .section-title-container .section-title-background {
     left: 20px;
     width: 200px;
   }
 }
-#contato .container .section-title-container .section-title {
+#contato .container .section-title-container .section-title, #contact .container .section-title-container .section-title {
   color: #CCC;
 }
-#contato .container form {
+#contato .container form, #contact .container form {
   display: grid;
   grid-gap: 10px;
   grid-auto-columns: 245px;
   justify-content: center;
 }
-#contato .container form input {
+#contato .container form input, #contact .container form input {
   height: 30px;
   padding: 10px;
   border-radius: 0;
@@ -541,14 +601,14 @@ header nav ul li a:hover {
   font-size: 16px;
 }
 @media (min-width: 768px) {
-  #contato .container form input[name=emailAddress] {
+  #contato .container form input[name=emailAddress], #contact .container form input[name=emailAddress] {
     grid-column: 2;
   }
-  #contato .container form input[name=subject] {
+  #contato .container form input[name=subject], #contact .container form input[name=subject] {
     grid-column: 1/3;
   }
 }
-#contato .container form textarea {
+#contato .container form textarea, #contact .container form textarea {
   grid-row-end: span 15;
   padding: 10px;
   border-radius: 0;
@@ -558,20 +618,20 @@ header nav ul li a:hover {
   font-size: 16px;
 }
 @media (min-width: 768px) {
-  #contato .container form textarea {
+  #contato .container form textarea, #contact .container form textarea {
     grid-row: 3/span 15;
     grid-column: 1/3;
   }
 }
-#contato .container form button {
+#contato .container form button, #contact .container form button {
   background-color: #FFF;
 }
 @media (min-width: 768px) {
-  #contato .container form button {
+  #contato .container form button, #contact .container form button {
     grid-column: 2;
   }
 }
-#contato .container form button:hover {
+#contato .container form button:hover, #contact .container form button:hover {
   box-shadow: 0 0 1px #FFF;
 }
 

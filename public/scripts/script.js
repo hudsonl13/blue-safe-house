@@ -5,3 +5,8 @@ collapsibleMenuButton.addEventListener("click" , function()
 {
     collapsibleMenu.classList.toggle("menu-active");
 });
+
+collapsibleMenu.addEventListener("click" , function()
+{
+    collapsibleMenu.classList.toggle("menu-active");
+})

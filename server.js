@@ -16,6 +16,11 @@ app.get("/" , function(req , res)
     res.render("index");
 });
 
+app.get("/en" , function(req , res)
+{
+    res.render("index_en");
+});
+
 app.post("/email" , function(req , res)
 {
     let transporter = nodemailer.createTransport(
@@ -61,6 +66,16 @@ app.get("/email-success" , function(req , res)
 app.get("/email-fail" , function(req , res)
 {
     res.render("email-fail");
+});
+
+app.get("/en/email-success" , function(req , res)
+{
+    res.render("email-success_en");
+});
+
+app.get("/en/email-fail" , function(req , res)
+{
+    res.render("email-fail_en");
 });
 
 // Start web server

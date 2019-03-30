@@ -47,11 +47,13 @@ header
 
         @media (min-width: 768px)
         {
+            padding: 0 20px;
             justify-content: center;
         }
 
         @media (min-width: 1200px)
         {
+            padding: 0;
             justify-content: normal;
         }
 
@@ -92,6 +94,42 @@ header
                 display: flex;
             }
 
+            &#language
+            {
+                margin-left: auto;
+
+                li
+                {
+                    margin: 0;
+
+                    &:first-of-type
+                    {
+                        margin-right: 20px;
+
+                        a
+                        {
+                            background: url("/images/flag_brazil.svg") center no-repeat;
+                        }
+                    }
+
+                    &:last-of-type
+                    {
+                        a
+                        {
+                            background: url("/images/flag_usa.svg") center no-repeat;
+                        }
+                    }
+
+                    a
+                    {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+            }
+
             li
             {
                 margin: 0 20px;
@@ -118,7 +156,7 @@ header
     }
 }
 
-#inicio
+#inicio , #start
 {
     height: 700px;
     background: url("/images/mountains_lowpoly.png") no-repeat center bottom , url("/images/binarycode_black.svg") center top , linear-gradient(#000 , #001423);
@@ -193,7 +231,7 @@ header
     }
 }
 
-#sobre
+#sobre , #about
 {
     background-color: #000;
     color: #CCC;
@@ -278,7 +316,7 @@ header
     background-size: 1000px , cover;
 }
 
-#servicos
+#servicos , #services
 {
     color: #001423;
 
@@ -300,6 +338,16 @@ header
                 width: 555px;
             }
 
+            &-en
+            {
+                width: 255px;
+
+                @media (min-width: 768px)
+                {
+                    width: 515px;
+                }
+            }
+
             .section-title-background
             {
                 left: 10px;
@@ -310,6 +358,16 @@ header
                 {
                     left: 20px;
                     width: 535px;
+                }
+
+                &-en
+                {
+                    width: 245px;
+
+                    @media (min-width: 768px)
+                    {
+                        width: 495px;
+                    }
                 }
             }
         }
@@ -408,17 +466,42 @@ header
 
             @media (min-width: 1200px)
             {
-                left: 725px;
+                margin-left: auto;
+            }
+
+            &-en
+            {
+                width: 220px;
+
+                @media (min-width: 768px)
+                {
+                    width: 440px;
+                }
+
+                @media (min-width: 1200px)
+                {
+                    margin-left: auto;
+                }
             }
 
             .section-title-background
             {
-                width: 220px;
+                width: 208px;
                 background-color: #CCC;
 
                 @media (min-width: 768px)
                 {
                     width: 435px;
+                }
+
+                &-en
+                {
+                    width: 210px;
+
+                    @media (min-width: 768px)
+                    {
+                        width: 420px;
+                    }
                 }
             }
 
@@ -597,7 +680,7 @@ header
             {
                 .corp-logo
                 {
-                    background: url("/images/yuri-games_title_black.png") center/contain no-repeat;
+                    background: url("/images/yuri-games_title_black.svg") center/contain no-repeat;
                 }
             }
 
@@ -645,7 +728,7 @@ header
     }
 }
 
-#contato
+#contato , #contact
 {
     background: url("/images/binarycode_black.svg") center top , linear-gradient(#000 , #001423);
     background-size: 1000px , cover;
