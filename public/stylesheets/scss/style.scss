@@ -892,6 +892,11 @@ footer
             {
                 background: url("/images/icon_github.svg") no-repeat;
             }
+
+            &:nth-of-type(3)
+            {
+                background: url("/images/icon_linkedin.svg") no-repeat;
+            }
         }
     }
 
