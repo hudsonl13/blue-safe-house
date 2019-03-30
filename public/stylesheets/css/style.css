@@ -82,27 +82,6 @@ header nav ul {
     display: flex;
   }
 }
-header nav ul#language {
-  margin-left: auto;
-}
-header nav ul#language li {
-  margin: 0;
-}
-header nav ul#language li:first-of-type {
-  margin-right: 20px;
-}
-header nav ul#language li:first-of-type a {
-  background: url("/images/flag_brazil.svg") center no-repeat;
-}
-header nav ul#language li:last-of-type a {
-  background: url("/images/flag_usa.svg") center no-repeat;
-}
-header nav ul#language li a {
-  display: inline-block;
-  vertical-align: middle;
-  width: 36px;
-  height: 36px;
-}
 header nav ul li {
   margin: 0 20px;
   font-family: "Montserrat";
@@ -117,6 +96,28 @@ header nav ul li a:visited {
 }
 header nav ul li a:hover {
   color: #FFF;
+}
+header nav ul#language-selector {
+  display: flex;
+  margin: 0 20px 0 auto;
+}
+header nav ul#language-selector li {
+  margin: 0;
+}
+header nav ul#language-selector li:first-of-type {
+  margin-right: 20px;
+}
+header nav ul#language-selector li:first-of-type a {
+  background: url("/images/flag_brazil.svg") center no-repeat;
+}
+header nav ul#language-selector li:last-of-type a {
+  background: url("/images/flag_usa.svg") center no-repeat;
+}
+header nav ul#language-selector li a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
 }
 
 #inicio, #start {

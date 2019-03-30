@@ -94,9 +94,33 @@ header
                 display: flex;
             }
 
-            &#language
+            li
             {
-                margin-left: auto;
+                margin: 0 20px;
+                font-family: "Montserrat";
+                text-transform: uppercase;
+
+                a
+                {
+                    color: #CCC;
+                    text-decoration: none;
+
+                    &:visited
+                    {
+                        color: #CCC;
+                    }
+
+                    &:hover
+                    {
+                        color: #FFF;
+                    }
+                }
+            }
+
+            &#language-selector
+            {
+                display: flex;
+                margin: 0 20px 0 auto;
 
                 li
                 {
@@ -126,29 +150,6 @@ header
                         vertical-align: middle;
                         width: 36px;
                         height: 36px;
-                    }
-                }
-            }
-
-            li
-            {
-                margin: 0 20px;
-                font-family: "Montserrat";
-                text-transform: uppercase;
-
-                a
-                {
-                    color: #CCC;
-                    text-decoration: none;
-
-                    &:visited
-                    {
-                        color: #CCC;
-                    }
-
-                    &:hover
-                    {
-                        color: #FFF;
                     }
                 }
             }
