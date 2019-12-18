@@ -8,6 +8,11 @@
     margin: 0;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 body
 {
     font-family: "Roboto";
@@ -40,14 +45,14 @@ header
     nav
     {
         display: flex;
+        padding: 0 20px;
+        margin: 0 auto;
         max-width: 1180px;
         height: 50px;
         line-height: 50px;
-        margin: 0 auto;
 
         @media (min-width: 768px)
         {
-            padding: 0 20px;
             justify-content: center;
         }
 
@@ -59,28 +64,16 @@ header
 
         #collapsible-menu-button
         {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             width: 20px;
             height: 15px;
-            margin: auto 20px;
             background-image: url("/images/icon_collapsible-menu.svg");
 
             @media (min-width: 768px)
             {
                 display: none;
-            }
-        }
-
-        div:nth-of-type(2)
-        {
-            display: none;
-
-            @media (min-width: 768px)
-            {
-                display: block;
-                width: 32px;
-                height: 32px;
-                margin: auto 20px auto 0;
-                background-image: url("/images/logo.png");
             }
         }
 
@@ -99,6 +92,11 @@ header
                 margin: 0 20px;
                 font-family: "Montserrat";
                 text-transform: uppercase;
+
+                &:first-of-type
+                {
+                    margin-left: 0;
+                }
 
                 a
                 {
@@ -120,7 +118,7 @@ header
             &#language-selector
             {
                 display: flex;
-                margin: 0 20px 0 auto;
+                margin-left: auto;
 
                 li
                 {
@@ -159,34 +157,39 @@ header
 
 #inicio , #start
 {
-    height: 700px;
-    background: url("/images/mountains_lowpoly.png") no-repeat center bottom , url("/images/binarycode_black.svg") center top , linear-gradient(#000 , #001423);
+    position: relative;
+    min-height: 100vh;
+    background: url("/images/mountains_lowpoly.png") center bottom/cover no-repeat , url("/images/binarycode_black.svg") center top , linear-gradient(#000 , #001423);
     background-size: auto , 1000px , cover;
 
-    @media (min-width: 768px)
-    {
-        height: 1000px;
-    }
+    // @media (min-width: 768px)
+    // {
+    //     height: 1000px;
+    // }
 
     @media (min-width: 1200px)
     {
-        height: 900px;
+        background-size: contain , 1000px , cover;
     }
 
     div
     {
-        padding-top: 180px;
+        position: absolute;
+        top: 50vh;
+        transform: translateY(-50%);
+        width: 100%;
         text-align: center;
+        margin: 0 auto;
         color: #CCC;
 
         @media (min-width: 768px)
         {
-            padding-top: 300px;
+            // padding-top: 300px;
         }
 
         @media (min-width: 1200px)
         {
-            padding-top: 250px;
+            // padding-top: 250px;
         }
 
         h1
@@ -208,6 +211,11 @@ header
             {
                 font-weight: 100;
             }
+
+            .space
+            {
+                display: none;
+            }
         }
 
         p
@@ -225,9 +233,13 @@ header
     a
     {
         display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
         width: 24px;
         height: 24px;
-        margin: 20px auto 0;
+        margin: 0 auto;
         background: url("/images/icon_down-arrow.svg") center no-repeat;
     }
 }
@@ -462,7 +474,7 @@ header
 
             @media (min-width: 768px)
             {
-                width: 460px;
+                width: 456px;
             }
 
             @media (min-width: 1200px)

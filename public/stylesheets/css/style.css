@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto";
   font-size: 16px;
@@ -33,14 +37,14 @@ header {
 }
 header nav {
   display: flex;
+  padding: 0 20px;
+  margin: 0 auto;
   max-width: 1180px;
   height: 50px;
   line-height: 50px;
-  margin: 0 auto;
 }
 @media (min-width: 768px) {
   header nav {
-    padding: 0 20px;
     justify-content: center;
   }
 }
@@ -51,26 +55,16 @@ header nav {
   }
 }
 header nav #collapsible-menu-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 20px;
   height: 15px;
-  margin: auto 20px;
   background-image: url("/images/icon_collapsible-menu.svg");
 }
 @media (min-width: 768px) {
   header nav #collapsible-menu-button {
     display: none;
-  }
-}
-header nav div:nth-of-type(2) {
-  display: none;
-}
-@media (min-width: 768px) {
-  header nav div:nth-of-type(2) {
-    display: block;
-    width: 32px;
-    height: 32px;
-    margin: auto 20px auto 0;
-    background-image: url("/images/logo.png");
   }
 }
 header nav ul {
@@ -87,6 +81,9 @@ header nav ul li {
   font-family: "Montserrat";
   text-transform: uppercase;
 }
+header nav ul li:first-of-type {
+  margin-left: 0;
+}
 header nav ul li a {
   color: #CCC;
   text-decoration: none;
@@ -99,7 +96,7 @@ header nav ul li a:hover {
 }
 header nav ul#language-selector {
   display: flex;
-  margin: 0 20px 0 auto;
+  margin-left: auto;
 }
 header nav ul#language-selector li {
   margin: 0;
@@ -121,34 +118,24 @@ header nav ul#language-selector li a {
 }
 
 #inicio, #start {
-  height: 700px;
-  background: url("/images/mountains_lowpoly.png") no-repeat center bottom, url("/images/binarycode_black.svg") center top, linear-gradient(#000, #001423);
+  position: relative;
+  min-height: 100vh;
+  background: url("/images/mountains_lowpoly.png") center bottom/cover no-repeat, url("/images/binarycode_black.svg") center top, linear-gradient(#000, #001423);
   background-size: auto, 1000px, cover;
-}
-@media (min-width: 768px) {
-  #inicio, #start {
-    height: 1000px;
-  }
 }
 @media (min-width: 1200px) {
   #inicio, #start {
-    height: 900px;
+    background-size: contain, 1000px, cover;
   }
 }
 #inicio div, #start div {
-  padding-top: 180px;
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 100%;
   text-align: center;
+  margin: 0 auto;
   color: #CCC;
-}
-@media (min-width: 768px) {
-  #inicio div, #start div {
-    padding-top: 300px;
-  }
-}
-@media (min-width: 1200px) {
-  #inicio div, #start div {
-    padding-top: 250px;
-  }
 }
 #inicio div h1, #start div h1 {
   padding-left: 10px;
@@ -167,6 +154,9 @@ header nav ul#language-selector li a {
 #inicio div h1 span, #start div h1 span {
   font-weight: 100;
 }
+#inicio div h1 .space, #start div h1 .space {
+  display: none;
+}
 #inicio div p, #start div p {
   font-weight: 100;
   text-transform: lowercase;
@@ -178,9 +168,13 @@ header nav ul#language-selector li a {
 }
 #inicio a, #start a {
   display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
   width: 24px;
   height: 24px;
-  margin: 20px auto 0;
+  margin: 0 auto;
   background: url("/images/icon_down-arrow.svg") center no-repeat;
 }
 
@@ -356,7 +350,7 @@ header nav ul#language-selector li a {
 }
 @media (min-width: 768px) {
   #portfolio .container .section-title-container {
-    width: 460px;
+    width: 456px;
   }
 }
 @media (min-width: 1200px) {
