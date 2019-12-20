@@ -421,16 +421,16 @@ header nav ul#language-selector li a {
   text-align: center;
 }
 #portfolio .container #projects .project:nth-of-type(1)::after {
-  background: url("/images/project_e-stop.jpg") no-repeat;
-  background-size: cover;
+  background: url("/images/project_e-stop.jpg") center/cover no-repeat;
 }
 #portfolio .container #projects .project:nth-of-type(2)::after {
-  background: url("/images/project_sonar.jpg") no-repeat;
-  background-size: cover;
+  background: url("/images/project_sonar.jpg") center/cover no-repeat;
 }
 #portfolio .container #projects .project:nth-of-type(3)::after {
-  background: url("/images/project_acampebem.jpg") no-repeat;
-  background-size: cover;
+  background: url("/images/project_acampebem.jpg") center/cover no-repeat;
+}
+#portfolio .container #projects .project:nth-of-type(4)::after {
+  background: url("/images/project_cultura.jpg") center/cover no-repeat;
 }
 #portfolio .container #projects .project::after {
   content: "";

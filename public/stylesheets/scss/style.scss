@@ -162,11 +162,6 @@ header
     background: url("/images/mountains_lowpoly.png") center bottom/cover no-repeat , url("/images/binarycode_black.svg") center top , linear-gradient(#000 , #001423);
     background-size: auto , 1000px , cover;
 
-    // @media (min-width: 768px)
-    // {
-    //     height: 1000px;
-    // }
-
     @media (min-width: 1200px)
     {
         background-size: contain , 1000px , cover;
@@ -181,16 +176,6 @@ header
         text-align: center;
         margin: 0 auto;
         color: #CCC;
-
-        @media (min-width: 768px)
-        {
-            // padding-top: 300px;
-        }
-
-        @media (min-width: 1200px)
-        {
-            // padding-top: 250px;
-        }
 
         h1
         {
@@ -557,20 +542,22 @@ header
 
                 &:nth-of-type(1)::after
                 {
-                    background: url("/images/project_e-stop.jpg") no-repeat;
-                    background-size: cover;
+                    background: url("/images/project_e-stop.jpg") center/cover no-repeat;
                 }
 
                 &:nth-of-type(2)::after
                 {
-                    background: url("/images/project_sonar.jpg") no-repeat;
-                    background-size: cover;
+                    background: url("/images/project_sonar.jpg") center/cover no-repeat;
                 }
 
                 &:nth-of-type(3)::after
                 {
-                    background: url("/images/project_acampebem.jpg") no-repeat;
-                    background-size: cover;
+                    background: url("/images/project_acampebem.jpg") center/cover no-repeat;
+                }
+
+                &:nth-of-type(4)::after
+                {
+                    background: url("/images/project_cultura.jpg") center/cover no-repeat;
                 }
 
                 &::after
