@@ -23,6 +23,12 @@ app.get("/en" , function(req , res)
 
 app.post("/email" , function(req , res)
 {
+    if (req.body.sumchk != 15)
+    {
+        res.redirect("/email-fail");
+        return;
+    }
+
     let transporter = nodemailer.createTransport(
     {
         host: "smtp.gmail.com" ,
@@ -55,6 +61,49 @@ app.post("/email" , function(req , res)
             res.redirect("/email-fail");
         else
             res.redirect("/email-success");
+    });
+});
+
+app.post("/en/email" , function(req , res)
+{
+    if (req.body.sumchk != 15)
+    {
+        res.redirect("/en/email-fail");
+        return;
+    }
+
+    let transporter = nodemailer.createTransport(
+    {
+        host: "smtp.gmail.com" ,
+        port: 465 ,
+        secure: true , // True for 465, false for other ports
+        auth:
+        {
+            type: "OAuth2" ,
+            user: process.env.GMAIL_USER ,
+            clientId: process.env.GMAIL_CLIENT_ID ,
+            clientSecret: process.env.GMAIL_CLIENT_SECRET ,
+            refreshToken: process.env.GMAIL_REFRESH_TOKEN
+        }
+    });
+
+    // Setup email data with unicode symbols
+    let mailOptions =
+    {
+        from: "Nodemailer <contact@hudsonlessa.com>" , // Sender address
+        to: "contact@hudsonlessa.com" , // List of receivers
+        subject: req.body.subject , // Subject line
+        text: req.body.message + "\n" + req.body.name + " - " + req.body.emailAddress , // Plain text body
+        html: req.body.message + "<br><br><b>" + req.body.name + " - " + req.body.emailAddress + "</b>" // HTML body
+    };
+
+    // Send mail with defined transport object
+    transporter.sendMail(mailOptions , function(error , info)
+    {
+        if (error)
+            res.redirect("/en/email-fail");
+        else
+            res.redirect("/en/email-success");
     });
 });
 

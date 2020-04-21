@@ -815,6 +815,11 @@ header
                 }
             }
 
+            input[name="sumchk"]
+            {
+                grid-column: 2;
+            }
+
             button
             {
                 background-color: #FFF;
