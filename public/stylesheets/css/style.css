@@ -618,8 +618,10 @@ header nav ul#language-selector li a {
     grid-column: 1/3;
   }
 }
-#contato .container form input[name=sumchk], #contact .container form input[name=sumchk] {
-  grid-column: 2;
+@media (min-width: 768px) {
+  #contato .container form input[name=sumchk], #contact .container form input[name=sumchk] {
+    grid-column: 2;
+  }
 }
 #contato .container form button, #contact .container form button {
   background-color: #FFF;

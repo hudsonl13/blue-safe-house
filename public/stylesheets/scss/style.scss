@@ -815,9 +815,12 @@ header
                 }
             }
 
-            input[name="sumchk"]
+            @media (min-width: 768px)
             {
-                grid-column: 2;
+                input[name="sumchk"]
+                {
+                    grid-column: 2;
+                }
             }
 
             button
